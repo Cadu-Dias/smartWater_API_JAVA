@@ -1,4 +1,4 @@
-package smartwater.api.pi.domain.nodeattributes;
+package smartwater.api.pi.core.models.nodeattributes;
 
 import java.util.List;
 import java.util.Map;
