@@ -18,7 +18,7 @@ import smartwater.api.pi.infra.security.TokenService;
 
 @Tag(name = "Authentication")
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/api/timeseries/v0.5/smartcampusmaua/login")
 public class AuthenticationController {
     
     @Autowired

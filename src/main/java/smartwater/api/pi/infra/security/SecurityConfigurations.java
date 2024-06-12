@@ -29,8 +29,8 @@ public class SecurityConfigurations {
             .authorizeHttpRequests(
                 req -> 
                     req
-                        .requestMatchers("/v3/api-docs/", "/swagger-ui.html", "/swagger-ui/").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/login")
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/timeseries/v0.5/smartcampusmaua/login")
                         .permitAll()
                         .anyRequest()
                         .authenticated()
