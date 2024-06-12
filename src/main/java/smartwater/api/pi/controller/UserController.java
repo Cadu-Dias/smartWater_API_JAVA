@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import smartwater.api.pi.domain.users.User;
 import smartwater.api.pi.domain.users.UserRegistration;
