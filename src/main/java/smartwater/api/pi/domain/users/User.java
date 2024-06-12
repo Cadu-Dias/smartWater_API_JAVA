@@ -27,11 +27,17 @@ public class User implements UserDetails{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     private String email;
     private String password;
     private String user_role;
+
+    public User(UserRegistration userRegistry) {
+        this.email = userRegistry.email();
+        this.password = userRegistry.password();
+        this.user_role = userRegistry.user_role();
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

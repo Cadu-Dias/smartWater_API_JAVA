@@ -30,8 +30,7 @@ public class SecurityConfigurations {
                 req -> 
                     req
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/timeseries/v0.5/smartcampusmaua/login")
-                        .permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/timeseries/v0.5/smartcampusmaua/login").permitAll()
                         .anyRequest()
                         .authenticated()
                     
