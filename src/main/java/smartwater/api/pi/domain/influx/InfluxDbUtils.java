@@ -1,10 +1,8 @@
-package smartwater.api.pi.utils;
+package smartwater.api.pi.domain.influx;
 
 
 import com.influxdb.query.FluxRecord;
 import com.influxdb.query.FluxTable;
-
-import smartwater.api.pi.core.models.nodeattributes.NodeAttributes;
 
 import java.util.ArrayList;
 import java.util.HashMap;

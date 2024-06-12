@@ -1,17 +1,13 @@
-package smartwater.api.pi.core.services;
+package smartwater.api.pi.domain.influx;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
 
 import com.influxdb.client.InfluxDBClient;
 import com.influxdb.client.InfluxDBClientFactory;
 import com.influxdb.client.QueryApi;
 import com.influxdb.query.FluxTable;
-
-import smartwater.api.pi.core.models.nodeattributes.NodeAttributes;
-import smartwater.api.pi.utils.InfluxDbUtils;
 
 @Service
 public class InfluxService {
@@ -25,13 +21,11 @@ public class InfluxService {
     @Value("${api.influxdb.config.database}")
     String database;
 
-    public NodeAttributes getAllNodes(String tableName, Optional<String> intervalSet, Optional<String> limitSet) {
+    public NodeAttributes getAllNodes(String tableName, String intervalSet, String limitSet) {
 
-        Integer limit = 10;
-        if(limitSet.isPresent()) limit = Integer.parseInt(limitSet.get());
+        Integer limit = Integer.parseInt(limitSet);
 
-        Integer interval = 60;
-        if(intervalSet.isPresent()) interval = Integer.parseInt(intervalSet.get());
+        Integer interval = Integer.parseInt(limitSet);
 
         NodeAttributes nodeAttributes = new NodeAttributes();
 
