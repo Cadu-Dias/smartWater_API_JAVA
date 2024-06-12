@@ -39,6 +39,7 @@ public class SpringDocConfigurations {
         ))
         .tags(Arrays.asList(
             new Tag().name("Authentication").description("Group Containing the routes that are used for Authentication and Authorization"),
+            new Tag().name("User").description("Routes for doing CRUD with the Users that can access the API"),
             new Tag().name("SmartLights").description("Collection of routes for managing SmartLights data within the system."),
             new Tag().name("WaterTanks").description("Set of routes for accessing Hidrometers data stored in the database."),
             new Tag().name("Hidrometers").description("Routes for retrieving and managing ArtesianWell data in the database."),
