@@ -27,6 +27,7 @@ public class AuthenticationController {
     @Autowired
     private TokenService tokenService;
 
+    @SuppressWarnings("rawtypes")
     @Operation( summary = "Validate the given user", description = "Verify if the sended user is present in the database")
     @PostMapping
     public ResponseEntity authenticateUser(@RequestBody UserAuthenticationData user) {
